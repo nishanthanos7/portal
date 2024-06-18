@@ -1,0 +1,60 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model user {
+  id        Int      @id @default(autoincrement())
+  firstName String   //this is one to one relation.// a user can have only one first name.
+  lastName  String
+  email     String  @unique
+  password  String
+  age       Int
+  createdAt DateTime @default(now())
+
+  updatedAt DateTime @updatedAt
+
+  article article[]    //A user can have multiple articles  [one-to-many relationship].
+  comment comment[]    //A user can have multiple comments  [one-to-many relationship].
+}
+
+
+model article {
+  id         Int       @id @default(autoincrement())
+  title      String
+  content    String
+  imageUrl   String  
+  authorId   Int
+  author     user      @relation(fields: [authorId], references: [id])         //this is many to one relationship. Many articles can have one author i.e related to user.
+  categoryId Int
+  category   category  @relation(fields: [categoryId], references: [id])
+  comments   comment[]
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+}
+
+
+model comment {
+  id        Int      @id @default(autoincrement())
+  content   String
+  articleId Int
+  article   article? @relation(fields: [articleId], references: [id])
+  authorId  Int
+  author    user     @relation(fields: [authorId], references: [id])
+  createdAt DateTime @default(now())
+
+  updatedAt DateTime @updatedAt
+}
+
+model category {
+  id   Int    @id @default(autoincrement())
+  name String
+
+  articles article[]
+}
+
+
