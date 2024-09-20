@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export", // Add your export setting here
   images: {
     domains: [
       "insidethemagic.net",
@@ -16,8 +17,3 @@ const nextConfig = {
 };
 
 export default nextConfig;
-
-
-module.exports = {
-  output: 'export',
-};
