@@ -26,7 +26,7 @@ export default function RootLayout({
        
           {/* <h3 className="text-center text-5xl py-9">LOGO</h3> */}
 
-          <Navbar />
+          {/* <Navbar /> */}
           {/* <p>{currentTime}</p> */}
           {/* 
         <div className="absolute top-96 right-0 ">

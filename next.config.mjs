@@ -1,7 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["insidethemagic.net", "cdn.pixabay.com", "npcdn.ratopati.com", "via.placeholder.com", "fakestoreapi.com" ,"www.onlinekhabar.com", "img.freepik.com"],
+    domains: [
+      "insidethemagic.net",
+      "cdn.pixabay.com",
+      "npcdn.ratopati.com",
+      "via.placeholder.com",
+      "fakestoreapi.com",
+      "www.onlinekhabar.com",
+      "img.freepik.com",
+      "assets-cdn-api.ekantipur.com",
+      "assets-cdn.ekantipur.com",
+    ],
   },
 };
 
