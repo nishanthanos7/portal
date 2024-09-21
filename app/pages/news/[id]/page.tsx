@@ -427,7 +427,7 @@ export default function NewsArticle({ params }: { params: { id: string } }) {
   }
 
   const relatedArticles = Object.values(articles)
-    .filter((a) => a.id !== params.id)
+    .filter((a) => a.id !== params.id)           //params id is a id that we give in url.. like news/[id]
     .slice(0, 2);
 
   return (

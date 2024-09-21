@@ -1593,7 +1593,7 @@ export default function Homepage() {
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b">
-        {/* <div className="container mx-auto px-4 py-2">
+        <div className="container mx-auto px-4 py-2">
           <div className="flex justify-between items-center">
             <div className="text-sm text-muted-foreground">
               {currentDateTime.toLocaleString("ne-NP", {
@@ -1611,7 +1611,7 @@ export default function Homepage() {
               <span>२५°C</span>
             </div>
           </div>
-        </div> */}
+        </div> 
         <div className="container mx-auto px-4 py-6">
           <h1 className="text-5xl font-bold text-center text-blue-700">
             नीलोपाटी
